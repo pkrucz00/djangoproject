@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        Moja pierwsza strona
+    </title>
+    <link type="text/css" rel="stylesheet" href="{% static 'format.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="formularz\\form.html">Formularz</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.gry.pl/">strona z grami</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://isitacat.com/">strona rozpoznajaca kota</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/playlist?list=OLAK5uy_mEN_UAn-osKfuqpFLQAojtHxNNbf09Jl0">MyLoveILove</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main_text">
+        <h1> Czy widziałeś, że...</h1>
+        <h2> Pozbawiony śluzu żołądek strawi sam siebie?</h2>
+        <h3> Wow, to niesamowite!</h3>
+        <h4> NIEWIARYGODNE FAKTY </h4>
+        <h1> Czy wiedziałeś też, że... </h1>
+        <h5> 100% ludzi, którzy pili wode </h5>
+        <h6> umarło </h6>
+        <p> Super</p>
+        <h1> Oto lista kolejnych niesamowitych i niewygodnych faktów:</h1>
+        <ul>
+            <li> Rabarbar od tyłu to rabrabar</li>
+            <li> Nie mamy kontroli nad swoim postępowaniem i długie odizolowanie nie wpływa za dobrze na naszą psychikę</li>
+            <li> Half Life 2 to najlepsza gra.</li>
+            <li> Metallica skończyła się na Kill 'Em All</li>
+            <li> Ten Pan jest Węgrem</li>
+            <img src="{% static 'PanZeStocka.jpg' %}" title="jó reggelt :)" height="300" width="450">
+            <li>
+                <p><a href="https://isitacat.com/">Ta strona</a> pokazuje, czy Twój kot jest kotem z 100% skutecznością</p>
+                <p> Co zrobić, aby link był w tekście?
+                    <h6> PROSZĘ O POMOC, ja się nie znam na komputerach :c </h6>
+                </p>
+            </li>
+            <li>
+                Właśnie stworzyłem listę w liście (co także jest ciekawostką)
+                <ol>
+                    Top 10 nielegalnych zgromadzeń
+                    <li>
+                        <img src="{% static 'pozytywista.png'%}" width="300" height="300">
+                    </li>
+                    <li> Ich Troje</li>
+                    <li> Kucharek sześć</li>
+                    <li> Tytus, Romek i A'Tomek</li>
+                    <li> Ten Pan z filmu Split</li>
+                    <li></li><li></li>
+                </ol>
+            </li>
+        </ul>
+        <h4>To była moja</h4>
+        <h3>pierwsza w życiu</h3>
+        <h1>strona internetowa</h1>
+        <h6>W tym miejscu chciałbym podziękować swoim rodzinom, wszystkim moim znajomym, którzy wspierali mnie w dokonaniu tego wiekopomnego czynu. Jestem pewny, że po pokonaniu kamienia milowego takiego jak ten czeka mnie niesamowita przygoda w świecie informatyki i szybkiego przepływu informacji</h6>
+        <img src="{% static 'crowd.gif' %}">
+        <audio controls>
+            <source src="{% static 'WOOOW.mp3'}" type="audio/mpeg">
+        </audio>
+        <h6> CO ZROBIC ZEBY MUZYKA ODTWORZYLA SIE DOPIERO JAK NAJADE MYSZKA NA GIFA? <B>HELP</B></h6>
+    </div>
+</body>
+
+</html>

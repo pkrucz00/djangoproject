@@ -1,0 +1,26 @@
+body{
+    margin:0;
+}
+
+.menu{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #1d1f;
+}
+
+.menu_el{
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.main_text{
+    background-color: #dead;
+    padding: 2px 16px;
+}

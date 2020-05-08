@@ -1,0 +1,17 @@
+body {
+    background-color: grey;
+}
+h1 {
+    color: blue;
+}
+
+.bold_text{
+    font-weight: bold;
+}
+
+.green_button{
+    background-color: green;
+}
+.red_button{
+    background-color: red;
+}
