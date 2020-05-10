@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.hello_world),
     path('ksiazki/', views.list_books),  #/ksiazki
+    path('mypage/', views.my_page),
 ]
