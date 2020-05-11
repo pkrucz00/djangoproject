@@ -22,4 +22,6 @@ urlpatterns = [
     path('hello/', views.hello_world),
     path('ksiazki/', views.list_books),  #/ksiazki
     path('mypage/', views.my_page),
+    path('form/', views.form, name="form"),
+    path("lista-ksiazek/<int:book_id>", views.book_details, name="book_details"),
 ]

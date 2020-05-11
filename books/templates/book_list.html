@@ -1,5 +1,14 @@
 {{klucz}}
 <br>
+
 {% for book in books %}
-    <p> ksiazka: {{book }}</p>
+    <div class="card">
+        <div class="card_body">>
+            <h5 class="card-title"> {{book.title }} </h5>
+            <p class="card-text">{{ book.short_description</p>
+            <a href="{% url 'book_details' book.id %}">
+                ksiazka: {{book }}
+            </a>
+        </div>
+    </div>
 {% endfor %}
