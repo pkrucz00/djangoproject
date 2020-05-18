@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        Witej {{ user }}!
+        <a href="{% url 'login' %}" class="btn btn-primary"> Wyloguj się </a>
+    {% else %}
+        <a href="{% url 'login' %}" class="btn btn-primary"> Zaloguj się</a>
+    {% endif %}
+{% endblock %}

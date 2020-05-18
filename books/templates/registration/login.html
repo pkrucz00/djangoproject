@@ -1,13 +1,13 @@
-{%extends"base.html"%}
+{%extends "base.html"%}
 
-{%blockcontent%}
+{%block content%}
 
-{%ifform.errors%}
+{%if form.errors%}
 <p>Your username and password didn't match. Please try again.</p>
 {%endif%}
 
-{%ifnext%}
-	{%ifuser.is_authenticated%}
+{%if next%}
+	{%if user.is_authenticated%}
 	<p>Your account doesn't have access to this page. To proceed,
     	please login with an account that has access.</p>
 	{%else%}
@@ -15,7 +15,7 @@
 	{%endif%}
 {%endif%}
 
-<formmethod="post"action="{%url'login'%}">
+<form method="post" action="{% url 'login' %}">
 {%csrf_token%}
 <table>
 <tr>
@@ -28,8 +28,8 @@
 </tr>
 </table>
 
-<inputtype="submit"value="login">
-<inputtype="hidden"name="next"value="{{next}}">
+<input type="submit" value="login">
+<input type="hidden" name="next" value="{{next}}">
 </form>
 
 {%endblock%}

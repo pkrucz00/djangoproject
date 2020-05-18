@@ -19,10 +19,12 @@ from books import views
 
 urlpatterns = [
     path("accounts/", include('django.contrib.auth.urls')),
+    path('accounts/profile/', views.profile_view, name='user_profile'),
+    path('accounts/signup/', views.user_signup, name="user_signup"),
     path('admin/', admin.site.urls),
     path('hello/', views.hello_world),
     path('ksiazki/', views.list_books),  #/ksiazki
-    path('mypage/', views.my_page),
+    path('', views.my_page),
     path('form/', views.form, name="form"),
     path("lista-ksiazek/<int:book_id>", views.book_details, name="book_details"),
 ]
