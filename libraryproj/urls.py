@@ -23,8 +23,7 @@ from books import views
 urlpatterns = [
     path("accounts/", include('django.contrib.auth.urls')),
     path('accounts/profile/', views.profile_view, name='user_profile'),
-    path('accounts/signup/', views.user_signup, name="user_signup")
-                  ,
+    path('accounts/signup/', views.user_signup, name="user_signup"),
     path('admin/', admin.site.urls),
     path('ksiazki/', views.list_books),  #/ksiazki
     path('', views.my_page, name="main_page"),
