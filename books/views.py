@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from books.models import Book, Author, Review
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView, ListView, DetailView
+
+from books.models import Book, Author, Review
 
 
 def hello_world(request):
@@ -59,6 +61,7 @@ class ReviewList(ListView):
 
 class AuthorDetail(DetailView):
     model = Author
+    template_name = "books/author_detail.html"
 
 class ReviewDetail(DetailView):
     model = Review

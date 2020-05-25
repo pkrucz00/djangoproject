@@ -5,8 +5,8 @@ def widok():
 
 class Book(models.Model):
     # id
-    title = models.CharField(max_length=100)
-    short_description = models.TextField()
+    title = models.CharField(verbose_name="tytuł", max_length=100)
+    short_description = models.TextField(verbose_name="opis")
     published_at = models.DateTimeField()
 
     author = models.ManyToManyField(to="books.Author",
@@ -45,3 +45,6 @@ class Review(models.Model):
     class Meta:
         verbose_name = "recenzja"
         verbose_name_plural = "recenzje"
+
+    def __str__(self):
+        return "Recenzja książki: " + self.book.title
