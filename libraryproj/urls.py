@@ -30,10 +30,10 @@ urlpatterns = [
     path('', views.my_page, name="main_page"),
     path('form/', views.form, name="form"),
 
-    path("lista-ksiazek/<int:pk>", views.book_details, name="book_details"),
+    path("lista-ksiazek/<int:book_id>", views.book_details, name="book_details"),
 
     path("recenzje", views.ReviewList.as_view(), name="review_list"),
 
     path("autorzy", views.AuthorList.as_view(), name="author_list"),
-    path("autorzy/<pk:id>", views.AuthorDetail.as_view(), name="author_detail"),
+    path("autorzy/<int:pk>", views.AuthorDetail.as_view(), name="author_detail"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
