@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from books.models import Book
+from books.models import Book, Author, Review
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import CreateView, ListView, DetailView
+
 
 def hello_world(request):
     return render(request, template_name="hello.html")
@@ -39,4 +41,24 @@ def user_signup(request):
         #wyswietlamy swiezy formularz
         form = UserCreationForm()
 
-    return render(request, template_name="registration/signup_form.html", context={"form": form})
+    return render(request, template_name="registration/signup_form.html",
+                  context={"form": form})
+
+class UserSignup(CreateView):
+    model = User
+    form_class = UserCreationForm
+    template_name = "registration/signup_form.html"
+
+
+class AuthorList(ListView):
+    model = Author
+    template_name = "books/author_list.html"
+
+class ReviewList(ListView):
+    model = Review
+
+class AuthorDetail(DetailView):
+    model = Author
+
+class ReviewDetail(DetailView):
+    model = Review

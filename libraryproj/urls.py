@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
 from books import views
 
 urlpatterns = [
@@ -26,5 +27,11 @@ urlpatterns = [
     path('ksiazki/', views.list_books),  #/ksiazki
     path('', views.my_page),
     path('form/', views.form, name="form"),
-    path("lista-ksiazek/<int:book_id>", views.book_details, name="book_details"),
+
+    path("lista-ksiazek/<int:pk>", views.book_details, name="book_details"),
+
+    path("recenzje", views.ReviewList.as_view(), name="review_list"),
+    path("autorzy", views.AuthorList.as_view(), name="author_list"),
+
+    path("autorzy/<pk:id>", views.AuthorDetail.as_view(), name="author_detail"),
 ]

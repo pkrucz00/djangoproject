@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Nasze recenzje</h1>
+    {% for review in review_list %}
+        {{ review }}<br>
+        Czy polecana: {{ review.recommended }}<br>
+    {% endfor %}
+{% endblock %}
